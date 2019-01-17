@@ -1,0 +1,304 @@
+@font-face{
+    font-family: Comfortaa;
+    font-style: normal;
+    src: url('Comfortaa-Regular.ttf');
+}
+@font-face{
+    font-family: Comfortaa;
+    font-stretch:condensed ;
+    src: url('Comfortaa-Light.ttf');
+}
+@font-face{
+    font-family: Comfortaa;
+    font-weight: bold;
+    src: url('Comfortaa-Bold.ttf');
+}
+
+html,body{
+    height:100vh;
+    width:100vw;
+    font-family: comfortaa;
+    font-stretch: condensed;
+}
+p{
+    display: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 150%;
+    background-color: #4045a3;
+    background-image: url("image/backg_resp2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#corp{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin-left: -10px;
+}
+#header{
+    position: fixed;
+    display: inline-block;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    bottom: 0px;
+    font-size-adjust: 0.4;
+    z-index: 90;
+}
+.chooser{
+    z-index: 94;
+}
+#header a .chooser{
+    z-index: 50;
+}
+
+#nbcase{
+    background-image: url("image/nbcase2.png");
+    background-size: cover;
+    background-color: #8291f4;
+    position: fixed;
+    left: 15px;
+    bottom: 45px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+#taille{
+    text-align: center;
+    color:#8291f4;
+    font-weight: bold;
+    font-size-adjust: 0.5;
+    padding-top: 11px;
+}
+#nbcase:hover{
+    background-color: #faff69;
+}
+#nbcase:hover .nbcase{
+    display: inline-block;
+}
+.nbcase{
+    position: fixed;
+    left: 15px;
+    bottom: 44px;
+    z-index: 99;
+    display: none;
+    background-color: #8291f4;
+}
+#videresp{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    height: 51px;
+    width: 51px;
+    border-radius: 0px 50px 50px 0px;
+    background-image: url("image/nbcase2.png");
+    background-size: contain;
+    background-color: #8291f4;
+    transition: background-color 0.3s;
+}
+#videresp:hover{
+    background-color: #faff69;
+}
+.chiffre{
+    font-size-adjust: 0.32;
+    display: inline-block;
+    padding: 16px 15px 16px 15px;
+    transition: background-color 0.3s;
+    float: left;
+    z-index: 99;
+    color: #3b46a4;
+}
+.chiffre:hover{
+    background-color: #faff69;
+}
+#new{
+    background-image: url("image/random2.png");
+    background-size: cover;
+    background-color: #8291f4;
+    position: fixed;
+    left: 80px;
+    bottom: 45px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+#new:hover{
+    background-color: #faff69;
+}
+
+#edit{
+    background-image: url("image/edit2.png");
+    background-size: cover;
+    background-color: #8291f4;
+    position: fixed;
+    left: 145px;
+    bottom: 45px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+#edit:hover{
+    background-color: #faff69;
+}
+#bregles{
+    background-image: url("image/regles2.png");
+    background-size: cover;
+    background-color: #8291f4;
+    position: fixed;
+    right: 15px;
+    bottom: 45px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    transition: background-color 0.3s;
+}
+#bregles:hover{
+    background-color: #faff69;
+}
+#bregles:hover .regles{
+    display: inline-block;
+}
+.regles{
+    position: fixed;
+    bottom: 95px;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+    background-color: #4045a3;
+    color: #8291f4;
+    display: none;
+    font-size-adjust: 0.39;
+}
+.regles img{
+    max-width: 30vh;
+    border: solid 1px;
+}
+#tacoyaki{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #8291f4;
+    color: #4045a3;
+    transition: padding 0.3s;
+}
+#tacoyaki:hover{
+    padding: 10px;
+}
+
+#surgrille{
+    background-color: rgba(19,28,56,0);
+    left: 0px;
+    position: fixed;
+    top: 50%;
+    right: 0px;
+}
+#grille{
+    display: inline-block;
+    left: 50%;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%,-75%);
+}
+.cell {
+    border-radius: 40px;
+    display:inline-block;
+    height: 41px;
+    margin: 0px 2px 0px 2px;
+    padding: 0px;
+    width: 41px;
+}
+.on {
+    background-color: #faffb1;
+    box-shadow: 0px 0px 5px #faff99;
+    transition: background-color 0.5s;
+}
+.on:hover{
+    background-color: #faff69;
+    border: 0px;
+}
+.off {
+    background-color: #070913;
+    box-shadow: 0px 0px 1px black;
+    transition: background-color 0.5s;
+}
+.off:hover{
+    background-color: #0f0d17;  
+}
+#coup{
+    font-size-adjust: 0.4;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    color: #8291f4;
+    text-align: center;
+    width: 100%;
+}
+#boutton{
+    position: fixed;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -45px;
+    z-index: 99;
+}
+button:hover{
+    background-color: #faff69;
+}
+button{
+    z-index: 99;
+    font-family: comfortaa;
+    font-size-adjust: 0.7;
+    color: #3b46a4;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #8291f4;
+    width: 100px;
+    height: 35px;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #faff69;
+}
+#gagne{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #faff69;
+    font-weight: bold;
+    font-size-adjust: 1;
+}
+#feu{
+    background-image: url("image/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#choix{display: none;}
+#choix button{
+    display: none;
+}
+#content{display: none;}

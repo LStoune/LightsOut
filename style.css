@@ -1,0 +1,504 @@
+@font-face{
+    font-family: Comfortaa;
+    font-style: normal;
+    src: url('Comfortaa-Regular.ttf');
+}
+@font-face{
+    font-family: Comfortaa;
+    font-stretch:condensed ;
+    src: url('Comfortaa-Light.ttf');
+}
+@font-face{
+    font-family: Comfortaa;
+    font-weight: bold;
+    src: url('Comfortaa-Bold.ttf');
+}
+
+html,body{
+    height:100vh;
+    width:100vw;
+    font-family: comfortaa;
+    font-stretch: condensed;
+}
+h2{
+    padding: 0;
+    margin: 0;
+}
+p{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 150%;
+    
+    background-color: #070913;
+}
+#corp{
+    top: 0;
+    padding: 0;
+    margin-left: -10px;
+    background-color: #5452ff;
+}
+
+/*    PARALLAX    */
+.parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+.para-header{
+    transform: translateZ(0);
+    z-index: 99;
+}
+.para-0{transform: translateZ(-50px) scale(51);}
+#para0{background-image: url("image/parallax0.png");}
+.para-1{transform: translateZ(-17px) scale(18);}
+#para1{background-image: url("image/parallax1.png");}
+.para-2{transform: translateZ(-9px) scale(10);}
+#para2{background-image: url("image/parallax2.png");}
+.para-3{transform: translateZ(-5px) scale(6);}
+#para3{background-image: url("image/parallax3.png");}
+.para-4{transform: translateZ(-3px) scale(4);}
+#para4{background-image: url("image/parallax4.png");}
+.para-5{transform: translateZ(-1.8px) scale(2.8);}
+#para5{background-image: url("image/parallax5.png");}
+.para-6{transform: translateZ(-1.1px) scale(2.1);}
+#para6{background-image: url("image/parallax6.png");}
+.para-7{transform: translateZ(-0.45px) scale(1.45);}
+#para7{background-image: url("image/parallax7.png");}
+.para-8{transform: translateZ(0)}
+#para8{background-image: url("image/parallax8.png");}
+.back{
+    position: fixed;
+    background-position: bottom center;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 1000px;
+    right: 0;
+}
+/*   FIN PARALLAX   */
+
+/*   BARRE DE MENU   */
+#header{
+    display: inline-block;
+    left: 0px;
+    margin-left: 10px;
+    background-color: #070915;
+    right: 0px;
+    height: 45px;
+    z-index: 99;
+    font-size-adjust: 0.4;
+}
+.chooser{
+    display: inline-block;
+    float: left;
+    width: auto;
+    padding: 10px 20px 0px 20px;
+    height: 35px;
+    transition: background-color 0.3s;
+    color: #a5a4ff;
+}
+.chooser:hover{
+    background-color: #1e2858; 
+}
+.chooser:hover .nbcase{
+    display: block;
+}
+.nbcase{
+    position: absolute;
+    display: inline-block;
+    display: none;
+    left: 0px;
+    top: 45px;
+    background-color: #070913;
+    padding-bottom: 15px;
+    font-size-adjust: 0.25;
+    color: #fffddd;
+}
+#taille{
+    display: none;
+}
+.chiffre{
+    color: #fffddd;
+    font-size-adjust: 0.32;
+    display: inline-block;
+    padding: 8px 13px 8px 13px;
+    background-color: #070913;
+    transition: background-color 0.3s;
+    float: left;
+}
+.chiffre:hover{
+    background-color: #1e2858;
+}
+.nbcase input{
+    background-color: #fffddd;
+    border: 0px;
+    text-align: center;
+}
+.nbcase button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: comfortaa; 
+    color: #070913;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #a5a4ff;
+    width: 75px;
+    height: 25px;
+}
+#tacoyaki{
+    background-color: #151538;
+}
+#tacoyaki:hover{
+    background-color: #1e2858;
+}
+#bregles{
+    display: inline-block;
+    padding: 10px 20px 0px 20px;
+    height: 35px;
+    float: right;
+    text-align: center;
+    z-index: 99;
+    transition: background-color 0.3s;
+    color: #fffddd;
+}
+#bregles:hover{
+    background-color: #1e2858; 
+}
+#bregles:hover .regles{
+    display: block;
+}
+.regles{
+    background-color: #070913;
+    height: 200vh;
+    width: 20vw;
+    padding: 20px;
+    position: fixed;
+    right: 0px;
+    top: 45px;
+    display: none;
+}
+.regles p{
+    color: #a5a4ff;
+}
+.regles img{
+    margin-top: 70px;
+}
+/*  FIN BARRE DE MENU  */
+
+/*  GRILLE DE JEU  */
+#grille{
+    position: fixed;
+    background-color: rgba(19,28,56,0.9);
+    border-radius: 30px 30px 30px 0px;
+    left: 50%;
+    padding: 0px 22px 19px 22px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+.cell {
+    border-radius: 40px;
+    display:inline-block;
+    height: 60px;
+    margin: 0px 3px 0px 2px;
+    padding: 0px;
+    width: 60px;
+}
+.on {
+    background-color: #faffb1;
+    box-shadow: 0px 0px 5px #faff99;
+    transition: background-color 0.5s;
+}
+.on:hover{
+    background-color: #faff69;
+    border: 0px;
+}
+.off {
+    background-color: #070913;
+    transition: background-color 0.5s;
+}
+.off:hover{
+    background-color: #0f0d17;  
+}
+#coup{
+    font-size-adjust: 0.4;
+    background-color: rgba(19,28,56,0.9);
+    position: fixed;
+    left: 0;
+    border-radius: 0px 0px 5px 30px;
+    padding: 0px 20px 5px 30px;
+    bottom: -29px;
+    text-align: center;
+    color: #a5a4ff;
+}
+#boutton{
+    position: fixed;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -70px;
+}
+#boutton button{
+    font-family: comfortaa;
+    font-size-adjust: 0.7;
+    color: #070913;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #faff99;
+    width: 100px;
+    height: 35px;
+    box-shadow: 0px 0px 5px #faff99;
+}
+#gagne{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #faff69;
+    font-weight: bold;
+    font-size-adjust: 1;
+}
+#feu{
+    background-image: url("image/giphy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/*  FIN GRILLE DE JEU  */
+
+/*   CONTENU   */
+#content{
+    position: relative;
+    bottom: 0;
+    left: 10px;
+    right: 0px;
+    min-height: 200vh;
+    top: 1000px;
+    background-color: #070913;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    padding-top: 50px;
+    color: #a5a4ff;
+}
+/*  DESCRIPTION PROJET  */
+#projet{
+    text-align: center;
+    position: relative;
+    min-height: calc(100vh - 0px);
+    max-width: calc(100vw - 0px);
+    border-bottom-style: dotted;
+    border-color: #a5a4ff;
+    margin: 100px;
+    padding: 0px;
+}
+.txt{
+    margin: 50px 250px 0px 250px;
+    border-bottom: solid 1px #a5a4ff;
+    padding-bottom: 50px;
+}
+#code{
+    border: none;
+}
+#projet img{
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    max-width: 200px;
+    background-color: #a5a4ff;
+    transition: background-color 0.3s;
+}
+#projet img:hover{
+    background-color: #faff69;
+}
+/*  FIN DESCRIPTION PROJET*/
+/*   L'EQUIPE & RESEAUX  */
+#team{
+    text-align: center;
+    position: relative;
+    min-height: calc(60vh - 0px);
+    padding: 0;
+    margin: 0;
+    margin-top: -100px;
+}
+.perso{
+    position: absolute;
+    top: 25vh;
+    opacity: 0.7;
+    z-index: 80;
+    transition: top 0.3s, opacity 0.3s;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+.perso:hover{
+    opacity: 1;
+    top: 23vh;
+}
+.desc{
+    position: absolute;
+    background-color: rgba(19,28,56,0.9);
+    left: 20px;
+    right: 30px;
+    display:none;
+    top: 20px;
+    padding: 70px;
+    margin: 50px;
+    z-index: 80;
+}
+.desc:target{
+   display: block;
+}
+.ferme{
+    position: absolute;
+    background-image: url("image/close.png");
+    background-size: cover;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    padding: 0;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+.ferme:hover{
+    opacity: 1;
+}
+#sixtyne{
+    left: 40vw;
+    transform: translate(-50%,-50%);
+    background-image: url("image/sixtyne.JPG");
+    background-size: cover;   
+}
+#axel{
+    left: 60vw;
+    transform: translate(-50%,-50%);
+    background-image: url("image/axel.JPG");
+    background-size: cover;
+}
+#kael{
+    left: 80vw;
+    transform: translate(-50%,-50%);
+    background-image: url("image/kael.JPG");
+    background-size: cover;
+}
+#prof{
+    left: 20vw;
+    transform: translate(-50%,-50%);
+    background-image: url("image/prof.JPG");
+    background-size: cover;
+}
+#descprof a{
+    color: #ffc166;
+}
+#team p{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%,0%);
+}
+.logo{
+    position: absolute;
+    z-index: 70;
+    top: 55vh;
+    transition: background-color 0.3s;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #a5a4ff;
+    transform: translate(-50%,0%)
+}
+#facebook{
+    background-image: url("image/facebook.png");
+    background-size: cover;
+    left: 35vw;
+}
+#facebook:hover{
+    background-color: #3b5998;
+}
+#twitter{
+    background-image: url("image/twitter.png");
+    background-size: cover;
+    left: 45vw;
+}
+#twitter:hover{
+    background-color: #55acee;
+}
+#pinterest{
+    background-image: url("image/pinterest.png");
+    background-size: cover;
+    left: 55vw;
+}
+#pinterest:hover{
+    background-color: #bd2125;
+}
+#youtube{
+    background-image: url("image/youtube.png");
+    background-size: cover;
+    left: 65vw;
+}
+#youtube:hover{
+    background-color: #ee1c1b;
+}
+
+/*  FIN EQUIPE & RESEAUX  */
+/*   PIED DE PAGE   */
+footer{
+    position: relative;
+    right: 0px;
+    left: 0px;
+    height: 25vh;
+    border-color: #a5a4ff;
+    border-top-style: dotted;
+    margin: 100px;
+    text-align: right;
+    padding: 20px;
+}
+footer a{
+    text-decoration: none;
+    color: #a5a4ff;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+footer a:hover{
+    opacity: 1;
+}
+#up{
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+    background-image: url("image/up.png");
+    background-size: cover;
+    border-radius: 30px;
+    background-color: #fffddd;
+    opacity: 0.2;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+#up:hover{
+    background-color: #faff69;
+    opacity: 1;
+}
+/*  FIN PIED DE PAGE  */
